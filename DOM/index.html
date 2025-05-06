@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Number</title>
+</head>
+<body>
+    <h2>2 numbers ko add karna </h2>
+    <input type="number" id="num1" placeholder="enter num 1">
+    <input type="number" id="num2" placeholder="enter num 2">
+
+    <button class="btn" onclick="addNumbers()">Add</button>
+    <button class="btns">Example Button 1</button>
+    <button class="btns">Example Button 2</button>
+    <button class="btns">Example Button 3</button>
+    <button class="btns">Example Button 4</button>
+
+    <h3>Result: <span id="result">0</span></h3>
+
+    <div class="box">
+        <h2 id="heading">remove karunga JS se</h2>
+    </div>
+
+    <script>
+        function addNumbers(){
+            const num1 = parseFloat(document.getElementById("num1").value)
+            const num2 = parseFloat(document.getElementById("num2").value)
+            const sum = num1 + num2
+
+            // document.getElementById("result").innerHTML = sum
+            document.getElementById("result").textContent = sum
+        }
+
+        const para = document.createElement("p")
+        para.innerHTML= "ye Paragraph create element se banaya he"
+        document.body.appendChild(para)
+
+        const updatePara = document.getElementById("result")
+        updatePara.style.backgroundColor = "purple"
+
+        const btn = document.querySelector(".btn")
+        btn.style.backgroundColor = "blue"
+        btn.style.color = "white"
+
+        const allButtons = document.querySelectorAll(".btns")
+        allButtons.forEach((button)=>{
+            button.style.color = "green"
+            button.style.backgroundColor = "black"
+        })
+
+        const box = document.querySelector(".box")
+        const heading = document.getElementById("heading")
+        box.removeChild(heading)
+
+    </script>
+</body>
+</html>
